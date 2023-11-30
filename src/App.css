@@ -208,10 +208,14 @@ background-color: rgb(2, 104, 104);
   
   background-color: white;
   /* background-color: lightgray; */
-  border-bottom: 3px solid gray;
+  /* border-bottom: 3px solid gray; */
+
+  
 
 
 }
+
+
 
 
 
@@ -221,9 +225,20 @@ background-color: rgb(2, 104, 104);
 
 .title2{
   font-size: 5vmin;
+  border-bottom: 3px solid rgb(2, 104, 104) ;
   
   color:rgb(2, 104, 104);
+
 }
+
+.contactTitle{
+  font-size: 2vmin;
+  color:rgb(2, 104, 104);
+  text-align: center;
+  width:80%
+
+}
+
 .text{
   overflow-wrap: break-word;
   width:100%;
