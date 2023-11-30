@@ -42,6 +42,21 @@ const Portfolio = () => {
     const [name,setName] = useState("")
     const [email,setEmail] = useState("")
     const [message2,setMessage2] = useState("")
+    
+
+    // const aboutMe = useRef(null);
+    // const skills = useRef(null);
+    // const projects = useRef(null);
+    // const contact = useRef(null);
+
+    // const scrollToSection = (elementRef) => {
+    //      window.scrollTo({
+    //         top: elementRef.current.offsetTop,
+    //         behavior: "smooth",
+    //      })
+    // }
+    
+
 
 
 
@@ -88,9 +103,9 @@ const Portfolio = () => {
                         <div className='title'>Web Developer</div>
                     </div>
                     <div className='picsRow'>
-                        <AnchorLink href="#contactForm" className='iconPic1'>
+                        <a href="/#contactForm" className='iconPic1'>
                             <img alt="alt" className='picSize2' src={message}></img>
-                        </AnchorLink>
+                        </a>
                         <Link to="https://www.linkedin.com/in/anthony-mccullough-06b0a7299/" className='iconPic2' >
                             <img alt="alt" className='picSize2' src={linkedin}></img>
                         </Link>
@@ -104,7 +119,7 @@ const Portfolio = () => {
 
                         <div className='infoColumn'>
                             <div className='titleLink'><u>Email:</u></div>
-                            <AnchorLink href="#contactForm" className='link'>mccullougha583@gmail.com</AnchorLink>
+                            <a href="#contactForm" className='link'>mccullougha583@gmail.com</a>
                         </div>
                         <div className='infoColumn'>
                             <div className='titleLink'><u>LinkedIn:</u></div>
@@ -126,8 +141,8 @@ const Portfolio = () => {
                         <div className='content'>
 
                             <div className='contentDiv'>
-                                <h1 className='title2'>About Me</h1>
-                                <div className="text">
+                                <h1 id="aboutMe" className='title2'>About Me</h1>
+                                <div  className="text">
                                     Hello , my name is Anthony McCullough .
                                     Im a web developer from Phoenix,AZ that has a passion for designing,
                                     constructing, and debugging mobile responsive web applications.
@@ -140,7 +155,7 @@ const Portfolio = () => {
 
 
                             <div className='contentDiv'>
-                                <h1 className='title2'>Skills</h1>
+                                <h1 id="skills"  className='title2'>Skills</h1>
                                 <div className="text">
 
                                     <img alt="alt" src={html} className='iconPicSize'></img>
@@ -172,7 +187,7 @@ const Portfolio = () => {
 
 
                             <div className='contentDiv'>
-                                <h1 className='title2'>Projects</h1>
+                                <h1 id="projects"  className='title2'>Projects</h1>
                                 <div className="text2">
 
                                     <img alt="alt" src={mainPic} className='bigPicSize'></img>
@@ -217,6 +232,7 @@ const Portfolio = () => {
 
                             <div className='contentDiv'>
                                 <h1 className='title2'>Contact Me</h1>
+                                <h3 className="contactTitle">Send me a message i am looking forward to hearing from you.</h3>
                                 <div className="text3">
                                     
                                     <form ref={form} onSubmit={sendEmail}>
@@ -226,7 +242,7 @@ const Portfolio = () => {
                                         <input className='inputSize font' type="email" name="user_email" value={email} onChange={(e)=>setEmail(e.target.value)} />
                                         <label className='marg font'>Message:</label>
                                         <textarea className='textareaSize font' name="message" value={message2} onChange={(e)=>setMessage2(e.target.value)} />
-                                        <input className='marg font btn2' type="submit" value="Send" />
+                                        <input id="contactForm" className='marg font btn2' type="submit" value="Send" />
                                     </form>
 
 
@@ -250,21 +266,21 @@ const Portfolio = () => {
                     </div>
                     <div className='navSection'>
 
-                        <AnchorLink href="#aboutMe" className='link'>
-                            <button id="1" className='btn'>About Me</button>
-                        </AnchorLink>
+                        <a href="/#aboutMe" className='link'>
+                            <button  id="1" className='btn'>About Me</button>
+                        </a>
 
-                        <AnchorLink href="#skills" className='link'>
+                        <a href="/#skills" className='link'>
                             <button id="2" className='btn'>Skills</button>
-                        </AnchorLink>
+                        </a>
 
-                        <AnchorLink href="#projects" className='link'>
-                            <button id="3" className='btn'>Projects</button>
-                        </AnchorLink>
+                        <a href="/#projects" className='link'>
+                            <button  id="3" className='btn'>Projects</button>
+                        </a>
 
-                        <AnchorLink href="#contactForm" className='link'>
+                        <a href="/#contactForm" className='link'>
                             <button className='btn'>Contact</button>
-                        </AnchorLink>
+                        </a>
 
                     </div>
 
