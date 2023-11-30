@@ -1,8 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState} from 'react';
+// import axios from 'axios';
 import { Link } from 'react-router-dom';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AnchorLink  from 'react-anchor-link-smooth-scroll';
+
+
 
 
 import pic from '../assets/profilePic.png';
@@ -22,15 +24,29 @@ import node from '../assets/node.png'
 import oop from '../assets/oop.png'
 import sass from '../assets/sass.png'
 import react from '../assets/react.png'
+import eCommerce from '../assets/eCommerce.png'
+import calculator from '../assets/calculator.png'
+import library from '../assets/library.png'
+import tripPlan from '../assets/tripPlan.png'
 
 
 
 
+const Portfolio = () => {
+
+    const [mainPic,setMainPic] = useState(eCommerce)
 
 
-export default function Portfolio({ }) {
 
 
+    const displayLargeImage  = (mainPicPath) => {
+    
+        setMainPic(mainPicPath)
+        
+    
+       
+    
+    }
 
 
 
@@ -41,7 +57,7 @@ export default function Portfolio({ }) {
 
                 <div className='mainFrame1'>
                     <div className='mainPicDiv'>
-                        <img className='picSize' src={pic}></img>
+                        <img alt="alt" className='picSize' src={pic}></img>
                     </div>
                     <div className='nameColumn'>
                         <div className='name'>Anthony McCullough</div>
@@ -50,14 +66,14 @@ export default function Portfolio({ }) {
                     </div>
                     <div className='picsRow'>
                         <AnchorLink href="#contactForm" className='iconPic1'>
-                            <img className='picSize2' src={message}></img>
+                            <img alt="alt" className='picSize2' src={message}></img>
                         </AnchorLink>
                         <Link to="https://www.linkedin.com/in/anthony-mccullough-06b0a7299/" className='iconPic2' >
-                            <img className='picSize2' src={linkedin}></img>
+                            <img alt="alt" className='picSize2' src={linkedin}></img>
                         </Link>
 
                         <Link to="https://github.com/AnthonyMcCullough" className='iconPic3'>
-                            <img className='picSize2' src={github}></img>
+                            <img alt="alt" className='picSize2' src={github}></img>
                         </Link>
 
                     </div>
@@ -85,6 +101,7 @@ export default function Portfolio({ }) {
                 <div className='mainFrame2'>
                     <div className='contentSection'>
                         <div className='content'>
+                            
                             <div className='contentDiv'>
                                 <h1 className='title2'>About Me</h1>
                                 <div className="text">
@@ -97,33 +114,78 @@ export default function Portfolio({ }) {
                                     
                                 </div>
                             </div>
-
+                                   
 
                             <div className='contentDiv'>
                                 <h1 className='title2'>Skills</h1>
                                 <div className="text">
                                
-                               <img src={html} className='iconPicSize'></img>
-                               <img src={css} className='iconPicSize'></img>
-                               <img src={javascript} className='iconPicSize'></img>
-                               <img src={oop} className='iconPicSize'></img>
-                               <img src={react} className='iconPicSize'></img>
-                               <img src={bootstrap} className='iconPicSize'></img>
+                               <img alt="alt" src={html} className='iconPicSize'></img>
+                               <img alt="alt"  src={css} className='iconPicSize'></img>
+                               <img alt="alt"  src={javascript} className='iconPicSize'></img>
+                               <img alt="alt"  src={oop} className='iconPicSize'></img>
+                               <img alt="alt"  src={react} className='iconPicSize'></img>
+                               <img alt="alt"  src={bootstrap} className='iconPicSize'></img>
 
                                     
                                 </div>
 
                                 <div className="text">
                                 
-                                <img src={sass} className='iconPicSize'></img>
-                               <img src={jquery} className='iconPicSize'></img>
-                               <img src={node} className='iconPicSize'></img>
-                               <img src={express} className='iconPicSize'></img>
-                               <img src={mongoose} className='iconPicSize'></img>
-                               <img src={mongoDB} className='iconPicSize'></img>
+                                <img alt="alt"  src={sass} className='iconPicSize'></img>
+                               <img alt="alt"  src={jquery} className='iconPicSize'></img>
+                               <img alt="alt"  src={node} className='iconPicSize'></img>
+                               <img alt="alt"  src={express} className='iconPicSize'></img>
+                               <img alt="alt"  src={mongoose} className='iconPicSize'></img>
+                               <img alt="alt"  src={mongoDB} className='iconPicSize'></img>
                                
 
                                     
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div className='contentDiv'>
+                                <h1 className='title2'>Projects</h1>
+                                <div className="text2">
+                               
+                               <img alt="alt"  src={mainPic} className='bigPicSize'></img>
+                               
+
+                                    
+                                </div>
+
+         
+
+                                <div className="picRow">
+                               <div className='picLinkColumn'>
+                               <div className='miniTitle'>E-Commerce Store </div>
+                                <img alt="alt"  src={eCommerce} onClick={()=>displayLargeImage(eCommerce)} className='projectPicSize'></img>
+                                <Link to="https://github.com/AnthonyMcCullough/E-CommerceStore" className='link2'>GitHub</Link>
+                                </div>
+
+                                <div className='picLinkColumn'>
+                                <div className='miniTitle'>Personal Library </div>
+                          
+                                <img alt="alt"  src={library} onClick={()=>displayLargeImage(library)} className='projectPicSize'></img>
+                                <Link to="https://github.com/AnthonyMcCullough/PersonalLibrary" className='link2'>GitHub</Link>
+                                </div>   
+                                
+                                <div className='picLinkColumn'>
+                                <div className='miniTitle'>Trip Planner</div>
+                                <img alt="alt"  src={tripPlan} onClick={()=>displayLargeImage(tripPlan)} className='projectPicSize'></img>
+                                <Link to="https://github.com/AnthonyMcCullough/TripPlanner" className='link2'>GitHub</Link>
+                                </div>    
+                                
+                                <div className='picLinkColumn'>
+                                <div id="projects" className='miniTitle'>Calculator</div>
+                                <img alt="alt"  src={calculator} onClick={()=>displayLargeImage(calculator)}className='projectPicSize'></img>
+                                <Link to="https://github.com/AnthonyMcCullough/Calculator" className='link2'>GitHub</Link>
+                                </div>
+          
                                 </div>
 
 
@@ -145,10 +207,22 @@ export default function Portfolio({ }) {
 
                     </div>
                     <div className='navSection'>
-                        <button className='btn'>About Me</button>
-                        <button className='btn'>Skills</button>
-                        <button className='btn'>Projects</button>
+                        
+                       <AnchorLink href="#aboutMe" className='link'>
+                        <button id="1" className='btn'>About Me</button>
+                        </AnchorLink>
+                        
+                        <AnchorLink href="#skills" className='link'>
+                        <button id="2" className='btn'>Skills</button>
+                        </AnchorLink>
+
+                        <AnchorLink href="#projects" className='link'>
+                        <button id="3" className='btn'>Projects</button>
+                        </AnchorLink>
+                        
+                        <AnchorLink href="#contactForm" className='link'>
                         <button className='btn'>Contact</button>
+                        </AnchorLink>
 
                     </div>
 
@@ -165,3 +239,5 @@ export default function Portfolio({ }) {
     )
 
 }
+
+export default Portfolio
