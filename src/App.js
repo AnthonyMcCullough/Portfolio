@@ -1,11 +1,21 @@
 
 import './App.css';
+import Portfolio from './views/Portfolio';
+import { Routes, Route } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      hello
-    </div>
+    <>
+
+    {/* <Portfolio /> */}
+
+  <Routes>
+
+<Route path="/" element={<Portfolio  />} />
+
+</Routes> 
+</> 
+
   );
 }
 
